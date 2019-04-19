@@ -1,0 +1,8 @@
+<h3>Create comment</h3>
+<%= form_with(model: [@post, @post.comments.build], url: create_comment_post_path, local: true) do |form| %>
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+  <%= form.submit %>
+<% end %>
